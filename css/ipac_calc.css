@@ -1,0 +1,88 @@
+body {
+    margin: 0;
+    background: #f7f7f7;
+}
+
+#ipac-calculator {
+    padding: 20px;
+    border: 1px solid #333333;
+    border-radius: 10px;
+    background-color: #ffffff;
+    margin: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+#ipac-calculator label {
+    display: block;
+    margin-top: 20px;
+}
+
+.calculator-actions {
+    margin-top: 30px;
+}
+
+.input-row {
+    display: flex;
+    gap: 20px;
+    background-color: #eaeaea;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 20px
+}
+
+#ipac-calculator .input-row label {
+    margin-top: 0;
+}
+
+#ipac-calculator .icon-currency, #ipac-calculator .icon-ops {
+    display: flex;
+    align-items: center;
+}
+
+#ipac-calculator .icon-currency::before {
+    content: '$';
+    display: inline-block;
+    font-weight: 600;
+    margin-right: 3px;
+    height: 100%;
+}
+
+#ipac-calculator .icon-staff::before {
+    content: '\f2bd';
+    font-family: 'Font Awesome 5 Free';
+    display: inline-block;
+    font-weight: 900;
+    margin-right: 3px;
+    height: 100%;
+}
+
+#calculator-results {
+    height: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 2s;
+} 
+
+#calculator-results.show {
+    height: auto;
+    max-height: 500px;
+}
+
+#calculator-results .total-results {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+#calculator-results-running-total {
+    margin-top: 10px;
+}
+
+.running-total {
+    display: inline-block;
+    font-weight: 600;
+    color: #c00;
+}
+
+.disclaimer {
+    font-size: 13px; color: #555555;
+}

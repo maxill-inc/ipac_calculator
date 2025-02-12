@@ -1,0 +1,77 @@
+<link rel="stylesheet" href="./css/ipac_calc.css">
+<script src="./js/ipac_calc.js" defer></script>
+
+
+
+<div id="ipac-calculator">
+    <h2>Lost Revenue</h2>
+    <div class="input-row">
+        <div>
+            <label for="ops-dds">Number of DDS Operatories</label>
+            <div class="icon-ops"><input type="number" id="ops-dds" value="0" min="0" required></div>
+        </div>
+        <div>
+            <label for="ops-rate-dds">Average Daily Revenue per DDS op</label>
+            <div class="icon-currency"><input type="number" id="ops-rate-dds" value="3000" min="0" required></div>
+        </div>
+    </div>
+    <div class="input-row">
+        <div>
+            <label for="ops-rdh">Number of RDH Operatories</label>
+            <div class="icon-ops"><input type="number" id="ops-rdh" value="0" min="0" required></div>
+        </div>
+        <div>
+            <label for="ops-rate-rdh">Average Daily Revenue per RDH op</label>
+            <div class="icon-currency"><input type="number" id="ops-rate-rdh" value="1800" min="0" required></div>
+        </div>
+    </div>
+    <hr>
+    <h2>Labour Costs</h2>
+    <div class="input-row">
+        <div>
+            <label for="labour-rdh">Number of RDHs</label>
+            <div class="icon-staff"><input type="number" id="labour-rdh" value="0" min="0" required></div>
+        </div>
+        <div>
+            <label for="labour-rate-rdh">Average Daily Labour cost per RDH</label>
+            <div class="icon-currency"><input type="number" id="labour-rate-rdh" value="400" min="0" required></div>
+        </div>
+    </div>
+    <div class="input-row">
+        <div>
+            <label for="labour-cda">Number of CDAs</label>
+            <div class="icon-staff"><input type="number" id="labour-cda" value="0" min="0" required></div>
+        </div>
+        <div>
+            <label for="labour-rate-cda">Average Daily Labour cost per CDA</label>
+            <div class="icon-currency"><input type="number" id="labour-rate-cda" value="200" min="0" required></div>
+        </div>
+    </div>
+    <div class="input-row">
+        <div>
+            <label for="labour-admin">Number of Admins</label>
+            <div class="icon-staff"><input type="number" id="labour-admin" value="0" min="0" required></div>
+        </div>
+        <div>
+            <label for="labour-rate-admin">Average Daily Labour cost per Admin</label>
+            <div class="icon-currency"><input type="number" id="labour-rate-admin" value="200" min="0" required></div>
+        </div>
+    </div>
+
+    <hr>
+    <div class="calculator-actions">
+        <button id="ipac-calculate" type="button">Calculate</button>
+        <button id="ipac-reset" type="button">Reset</button>
+    </div>
+    <div id="calculator-results">
+        <h2>Cost of a Closure</h2>
+        <div class="total-results"></div>
+        <div id="calculator-results-running-total">
+            Real-time Cost of Closure*: <div class="running-total"></div>
+        </div>
+        <div>
+            <span class="disclaimer">*Real-time closure cost calculated during operating hours of a 9 hour day.</span>
+        </div>
+    </div>
+
+</div>
