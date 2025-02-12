@@ -119,7 +119,7 @@ const ipacCalc = {
         this._interval = null;
     },
     startRunningTotal: function(){
-        if (ipacCalc._dailyCost >= 324000){
+        if (ipacCalc._dailyCost >= 32400){
             ipacCalc._runningTotal = ipacCalc._runningTotal + 1;
             elem.runningTotal.innerText = `$${ipacCalc._runningTotal.toFixed(0)}`;
         } else {
