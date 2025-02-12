@@ -76,12 +76,13 @@ const ipacCalc = {
         this._total[key] = total;
     },
     calculate: function(){
+        this._runningTotal = 0;
+        elem.runningTotal.innerText = '';
         ipacCalc.clearCalcInterval();
         // Gather input data
         this.ops();
         this.labour();
         // Calculate and set totals
-        this._runningTotal = 0;
         this.total('_ops');
         this.total('_labour');
         this._dailyCost = (this._total._ops + this._total._labour);
